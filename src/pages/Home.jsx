@@ -3,7 +3,7 @@ import MemeCard from "../components/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { getAllMemes } from "../api/memes";
 
-const Home = () => {
+const Home = ({ lightMode }) => {
   const [data, setData] = useState([]);
   useEffect(() => {
     getAllMemes().then((memes) => setData(memes.data.memes));
@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div id="img-wrapper">
       {data.map((el) => (
-        <MemeCard img={el.url} title={el.name} />
+        <MemeCard img={el.url} title={el.name} lightMode={lightMode} />
       ))}
     </div>
   );
