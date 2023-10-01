@@ -6,7 +6,15 @@ const MemeCard = (props) => {
   const navigate = useNavigate();
   return (
     <div>
-      <Card style={{ width: "18rem", margin: "18px  " }}>
+      <Card
+        style={{
+          width: "18rem",
+          margin: "18px",
+          backgroundColor: props.lightMode ? "#fff" : "#333",
+          color: props.lightMode ? "#000" : "#fff",
+          borderColor: props.lightMode ? "#d1d1d1" : "#818181",
+        }}
+      >
         <Card.Img variant="top" src={props.img} />
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
