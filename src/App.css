@@ -1,0 +1,38 @@
+.container{
+    border: 2px solid black;
+    width:100vw;
+    min-height: 630px;
+}
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+  }
+  
+  .navbar-brand {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .navbar-links .nav-link {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 2.5rem;
+
+  }
+  
+  .navbar-links .nav-link:hover {
+    color: #007BFF;
+  }
+  
+  .content {
+    margin-top: 20px;
+    margin-left: 50px;
+  }
+  
+  /* Additional styles for the content area can be added here */
+  
