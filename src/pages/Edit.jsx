@@ -10,6 +10,9 @@ const EditPage = () => {
   const addText = () => {
     setCount(count + 1);
   };
+  const btn1Style={
+    marginRight:'20px'
+  }
   return (
     <div>
       <div
@@ -27,7 +30,7 @@ const EditPage = () => {
             <Text />
           ))}
       </div>
-      <Button onClick={addText}> Add Text</Button>
+      <Button style={btn1Style} onClick={addText}> Add Text</Button>
       <Button
         variant="success"
         onClick={(e) => {
