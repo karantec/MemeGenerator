@@ -18,15 +18,18 @@
   }
   
   .navbar-links .nav-link {
-    margin-left: 20px;
+    /* margin-left: 20px; */
     text-decoration: none;
     color: #333;
     font-size: 2.5rem;
+    width: fit-content;
+    display: inline-block;
 
   }
   
   .navbar-links .nav-link:hover {
     color: #007BFF;
+    display: inline-block;
   }
   
   .content {
@@ -34,5 +37,39 @@
     margin-left: 50px;
   }
   
-  /* Additional styles for the content area can be added here */
+  .dark-mode {
+    background-color: #222;
+    color: #fff;
+  }
+  
+.toggle-button {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.toggle-button.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+.toggle-button.light {
+  background-color: #f0f0f0;
+  color: #222;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button:hover {
+  opacity: 0.8;
+}
+.home{
+  margin-right:350px;
+}
+
   
