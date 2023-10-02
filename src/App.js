@@ -14,18 +14,39 @@ function App() {
 
   return (
     <div className={`container ${isDarkMode ? 'dark-mode' : ''}`}>
-      <nav className="navbar">
-        <div className="navbar-brand">MEME GENERATOR</div>
-        <div className="navbar-links">
-          <Link to="/" className="nav-link home">
-            Home
+      <nav className="navbar navbar-expand-lg navbar-light">
+        <div className="container-fluid">
+          <Link to="/" className="navbar-brand">
+            MEME GENERATOR
           </Link>
           <button
-            onClick={toggleDarkMode}
-            className={`nav-link toggle-button ${isDarkMode ? 'dark' : 'light'}`}
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+            <span className="navbar-toggler-icon"></span>
           </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <Link to="/" className="nav-link">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <button
+                  onClick={toggleDarkMode}
+                  className={`nav-link toggle-button ${isDarkMode ? 'dark' : 'light'}`}
+                >
+                  {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
       <div className="content">
