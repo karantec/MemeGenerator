@@ -4,14 +4,15 @@ import Home from "./pages/Home";
 import EditPage from "./pages/Edit";
 
 function App() {
-  return (
+  return (<div>
+    <Navbar />
     <div className="container">
       <h1>Meme Generator</h1>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/edit" element={<EditPage />} />
       </Routes>
-    </div>
+    </div></div>
   );
 }
 
