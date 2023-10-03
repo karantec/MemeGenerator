@@ -12,7 +12,7 @@ const EditPage = () => {
   };
   return (
     <div>
-      <div 
+      <div
         style={{
           width: "500px",
           border: "1px solid",
@@ -28,7 +28,7 @@ const EditPage = () => {
           ))}
       </div>
       <Button onClick={addText}> Add Text</Button>
-      <Button 
+      <Button
         variant="success"
         onClick={(e) => {
           exportComponentAsJPEG(memeRef);
