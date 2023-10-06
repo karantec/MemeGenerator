@@ -7,9 +7,14 @@ import './App.css'; // Import the CSS file for additional styles
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [navLinksVisible, setNavLinksVisible] = useState(false);
 
   const toggleDarkMode = () => {
     setIsDarkMode(prevMode => !prevMode);
+  };
+
+  const toggleNavLinks = () => {
+    setNavLinksVisible(prevVisible => !prevVisible);
   };
 
   return (
@@ -20,18 +25,20 @@ function App() {
             MEME GENERATOR
           </Link>
           <button
-            className="navbar-toggler"
+            className={`navbar-toggler ${navLinksVisible ? 'collapsed' : ''}`}
             type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
             aria-controls="navbarNav"
-            aria-expanded="false"
+            aria-expanded={navLinksVisible ? 'true' : 'false'}
             aria-label="Toggle navigation"
+            onClick={() => toggleNavLinks()}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ml-auto">
+
+          <div className={`collapse navbar-collapse ${navLinksVisible ? 'show' : ''}`} id="navbarNav">
+            <ul className={`navbar-nav ml-auto ${navLinksVisible ? 'df' : ''}`}>
               <li className="nav-item">
                 <Link to="/" className="nav-link">
                   Home
@@ -49,6 +56,7 @@ function App() {
           </div>
         </div>
       </nav>
+
       <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />
