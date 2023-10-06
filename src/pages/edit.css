@@ -1,0 +1,14 @@
+.horizontal-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .horizontal-icons > * {
+    margin-right: 10px; 
+  }
+  .button{
+    margin-right:10px;
+  }
