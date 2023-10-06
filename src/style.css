@@ -1,4 +1,6 @@
 #img-wrapper {
   display: flex;
   flex-wrap: wrap;
+  gap:90px;
+  padding:30px;
 }
