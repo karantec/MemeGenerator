@@ -71,6 +71,16 @@
   opacity: 0.8;
 }
 
+.df{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+}
+
+
+
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
   .navbar {
