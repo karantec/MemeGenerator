@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home';
 import EditPage from './pages/Edit';
 import './App.css'; // Import the CSS file for additional styles
+import Footer from "./components/Footer"
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -18,6 +19,7 @@ function App() {
   };
 
   return (
+    <>
     <div className={`container ${isDarkMode ? 'dark-mode' : ''}`}>
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
@@ -64,6 +66,8 @@ function App() {
         </Routes>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

@@ -9,11 +9,13 @@ const Home = () => {
     getAllMemes().then((memes) => setData(memes.data.memes));
   }, []);
   return (
+    <>
 <div id="img-wrapper" >
       {data.map((el) => (
         <MemeCard img={el.url} title={el.name} />
       ))}
     </div>
+    </>
   );
 };
 export default Home;
