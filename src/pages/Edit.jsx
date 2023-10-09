@@ -27,16 +27,18 @@ const EditPage = () => {
             <Text />
           ))}
       </div>
-      <Button onClick={addText} style={{marginRight:'20px'}}> Add Text</Button>
-      <Button
-        variant="success"
-        onClick={(e) => {
-          exportComponentAsJPEG(memeRef);
-        }}
-      >
-        {" "}
-        Save Text
-      </Button>
+      <div className="buttonGrp">
+        <Button onClick={addText} style={{marginRight:'20px'}}> Add Text</Button>
+        <Button
+          variant="success"
+          onClick={(e) => {
+            exportComponentAsJPEG(memeRef);
+          }}
+        >
+          {" "}
+          Save Text
+        </Button>
+      </div>
     </div>
   );
 };
