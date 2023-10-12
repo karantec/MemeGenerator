@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   gap:90px;
   padding:30px;
+  justify-content: center;
 }
 
 @media(max-width:600px) {
