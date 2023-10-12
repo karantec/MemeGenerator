@@ -4,3 +4,47 @@
   gap:90px;
   padding:30px;
 }
+
+@media(max-width:600px) {
+  .container{
+     border: none;
+     overflow-x: hidden;
+  }
+
+  .meme{
+    width: auto!important;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid !important;
+  }
+
+  .navbar-toggler,.navbar-brand{
+    margin-left: 50%;
+    transform: translate(-50%,0);
+  }
+
+  .buttonGrp{
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttonGrp button{
+    border-radius: 20px;
+    padding: 3% 5%;
+  }
+
+  .imgCard{
+    width: auto !important;
+  }
+
+  #img-wrapper{
+    padding: 0px;
+    gap: 40px;
+  }
+}
+
+@media(max-width:340px){
+  .navbar-brand{
+    white-space: initial;
+  }
+}
