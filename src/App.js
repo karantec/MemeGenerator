@@ -3,7 +3,8 @@ import { Routes, Route, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home';
 import EditPage from './pages/Edit';
-import './App.css'; // Import the CSS file for additional styles
+import './App.css';
+import Snowfall from 'react-snowfall';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -18,7 +19,10 @@ function App() {
   };
 
   return (
-    <div className={`container ${isDarkMode ? 'dark-mode' : ''}`}>
+    <div className={`container1 ${isDarkMode ? 'dark-mode' : ''}`}>
+      {/* Set Snowfall as the background */}
+      <Snowfall snowflakeCount={100} style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%' }} />
+
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
           <Link to="/" className="navbar-brand">
