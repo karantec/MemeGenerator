@@ -7,7 +7,7 @@ const Text = () => {
   return (
     <Draggable>
       {editMode ? (
-        <input
+        <textarea
           onDoubleClick={(e) => setEditMode(false)}
           value={text}
           onChange={(e) => setText(e.target.value)}
